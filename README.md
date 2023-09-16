@@ -1,2 +1,2 @@
 # PYOS
-Trying to create Pythonos
+Official repository of PyOS.
