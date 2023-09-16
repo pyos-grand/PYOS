@@ -1,0 +1,2 @@
+import hmcg
+hmcg.run()
