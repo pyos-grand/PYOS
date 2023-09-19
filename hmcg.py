@@ -5,7 +5,7 @@ import os
 import pysys
 import hetools
 import oth.pu
-import fmtest.py
+import fmtest
 
 def apparto():
   appartoz()
