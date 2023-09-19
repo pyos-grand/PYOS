@@ -137,4 +137,4 @@ def show_dirsize():
   dirname = input("Enter dirname: ")
   print(os.path.getsize(dirname))
 
-  function_select()
+function_select()
