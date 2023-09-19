@@ -1,5 +1,9 @@
 import os
+import sys
+
 def function_select():
+    print("Humanity FileManagerIMROVED 0.0.1")
+    print("(c) 2023 PyOS develiopers and Roman Zeldinov (aka) InceptionTime")
     print("1. Show directory contents")
     print("2. Create file")
     print("3. Edit file")
@@ -136,5 +140,3 @@ def show_filestats():
 def show_dirsize():
   dirname = input("Enter dirname: ")
   print(os.path.getsize(dirname))
-
-function_select()

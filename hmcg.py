@@ -5,6 +5,7 @@ import os
 import pysys
 import hetools
 import oth.pu
+import fmtest
 
 def apparto():
   appartoz()
@@ -42,6 +43,9 @@ def hfmc():
 def cf():
   pathff = input("")
   hetools.cf(pathff)
+
+def fm():
+  fmtest.function_select()
 
 def info_sys_systemdirectory():
   cwd = os.getcwd()
@@ -121,6 +125,9 @@ commands = {
   "m": loadmod,
   "insp": ip,
   "inspm": ipm,
+  "inspkg": ip,
+  "inspkmg": ipm,
+  "hfmi": fm,
 }
 
 
