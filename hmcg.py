@@ -104,6 +104,7 @@ def ipm():
     exec(f23.read())
 commands = {
   "dir": apparto,
+  "apparto": apparto,
   "info husr.username": info_username,
   "husr": husrc,
   "hsrm": hsrm,
