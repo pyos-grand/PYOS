@@ -16,11 +16,11 @@ def info_username(logginguser):
 
 
 def husrc():
-  print("Humanity UserManager 0.0.4")
+  print("Humanity UserManager 0.0.5")
 
 
 def hsrm():
-  print("Humanity ServiceManager 0.0.4")
+  print("Humanity ServiceManager 0.0.5")
 
 
 def husr_create_user(logginguser):
