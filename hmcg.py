@@ -70,7 +70,7 @@ def infop():
   print("GRAND System Information Program version 0.0.5")
 
 def loadmod():
-  print("WARNING! This feature is in beta!")
+  print("Please, enter mod path.")
   modpath = input()
   pysys.loadmod(modpath)
 
@@ -81,6 +81,8 @@ def help():
   print("hfm - Humanity FileManager")
   print("htxe - Humanity TextEditor")
   print("info - Information Programm")
+  print("m - Load modification")
+  print("inspkmg - Install package(from a py-installer)")
 
 def dellog():
   print("Deleting log")
