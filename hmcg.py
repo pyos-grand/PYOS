@@ -77,7 +77,6 @@ def loadmod():
 def help():
   print("listdir - Show directory entries")
   print("husr - Humanity UserManager")
-  print("hsrm - Humanity ServiceManager")
   print("hfm - Humanity FileManager")
   print("htxe - Humanity TextEditor")
   print("info - Information Programm")
@@ -109,10 +108,6 @@ commands = {
   "apparto": apparto,
   "info husr.username": info_username,
   "husr": husrc,
-  "hsrm": hsrm,
-  "hsrm husr.createuser": husr_create_user,
-  "hsrm husr.resetuser": husr_reset_user,
-  "hsrm sys.SetUsername\husr.user2": sys_set_username,
   "hfm": hfmc,
   "info sys.systemdirectory": info_sys_systemdirectory,
   "htxe": htxec,

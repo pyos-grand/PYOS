@@ -3,7 +3,7 @@ import sys
 
 def function_select():
     print("Humanity FileManagerIMROVED 0.0.1")
-    print("(c) 2023 PyOS develiopers and Roman Zeldinov (aka) InceptionTime")
+    print("(c) 2023 PyOS develiopers and Roman Zeldinov (aka) WowInceptionGood")
     print("1. Show directory contents")
     print("2. Create file")
     print("3. Edit file")
