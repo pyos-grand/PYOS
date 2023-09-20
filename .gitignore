@@ -1,0 +1,10 @@
+logs/pyos-log.log
+__pycache__/fmtest.cpython-310.pyc
+__pycache__/hmcg.cpython-310.pyc
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/requirements.txt
+.vscode/snippets/python.json
+logs/pyos-log.log
