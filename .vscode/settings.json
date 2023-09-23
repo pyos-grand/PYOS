@@ -1,3 +1,4 @@
 {
-    "editor.fontFamily": "Consolas, 'Courier New', Droid Sans Mono"
+    "editor.fontFamily": "Consolas, 'Courier New', Droid Sans Mono",
+    "python.analysis.typeCheckingMode": "basic"
 }
