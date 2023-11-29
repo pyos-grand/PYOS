@@ -80,6 +80,7 @@ def help():
   print("listdir - Show directory entries")
   print("husr - Humanity UserManager")
   print("hfm - Humanity FileManager")
+  print("hfmi - Humanity FileManager Improved")
   print("htxe - Humanity TextEditor")
   print("info - Information Programm")
   print("m - Load modification")
