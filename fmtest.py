@@ -1,5 +1,6 @@
 import os
 import sys
+import shutil
 
 def function_select():
     print("Humanity FileManagerIMROVED 0.0.1")
@@ -56,21 +57,28 @@ def function_select():
     else:
         print("Invalid choice!")
 def show_dircontains():
-  direname = input("Enter dirname: ")
-  print(os.listdir(direname))
+    direname = input("Enter dirname: ")
+    try:
+        print(os.listdir(direname))
+    except FileNotFoundError:
+        print("Directory not found!")
 
 def create_file():
-  filename = input("Enter filename: ")
-  file = open(filename,"w")
-  file.close()
-  print("File created!")
+    filename = input("Enter filename: ")
+    try:
+        with open(filename, "w") as file:
+            print("File created!")
+    except IOError:
+        print("Error creating file!")
 
 def edit_file():
-  filename = input("Enter filename: ")
-  file = open(filename,"w")
-  file.write(input("Enter text: "))
-  file.close()
-  print("File edited!")
+    filename = input("Enter filename: ")
+    try:
+        with open(filename, "w") as file:
+            file.write(input("Enter text: "))
+            print("File edited!")
+    except IOError:
+        print("Error editing file!")
 
 def delete_file():
   filename = input("Enter filename: ")
@@ -100,16 +108,22 @@ def rename_dir():
   print("Directory renamed!")
 
 def copy_file():
-  filename = input("Enter filename: ")
-  newname = input("Enter new filename: ")
-  os.system("cp "+filename+" "+newname)
-  print("File copied!")
+    filename = input("Enter filename: ")
+    newname = input("Enter new filename: ")
+    try:
+        shutil.copy(filename, newname)
+        print("File copied!")
+    except IOError:
+        print("Error copying file!")
 
 def copy_dir():
-  dirname = input("Enter dirname: ")
-  newname = input("Enter new dirname: ")
-  os.system("cp -r "+dirname+" "+newname)
-  print("Directory copied!")    
+    dirname = input("Enter dirname: ")
+    newname = input("Enter new dirname: ")
+    try:
+        shutil.copytree(dirname, newname)
+        print("Directory copied!")
+    except IOError:
+        print("Error copying directory!")
 
 def move_file():
   filename = input("Enter filename: ")
