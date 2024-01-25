@@ -1,8 +1,8 @@
-import ishlib
+from lib import ishlib
 import os
 import sys
 import time
-import faststream
+from lib import faststream
 
 def ls():
     path = input("Path: ")
