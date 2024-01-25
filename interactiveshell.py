@@ -8,6 +8,8 @@ import fmtest
 
 commands = {
     "ls":ishtools.ls,
+    "apparto":ishtools.ls_legacy,
+    "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
     "vf":ishtools.vf,
     "wf":ishtools.wf,
