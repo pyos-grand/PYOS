@@ -1,5 +1,4 @@
 import os
-import filestream as fs
 import shutil
 import sys
 
