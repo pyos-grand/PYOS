@@ -9,6 +9,8 @@ import fmtest
 commands = {
     "ls":ishtools.ls,
     "cf":ishtools.cf,
+    "vf":ishtools.vf,
+    "wf":ishtools.wf,
     "m":ishtools.loadmod,
     "fm":fmtest.function_select,
     "hfmi":fmtest.function_select,
