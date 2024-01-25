@@ -19,7 +19,7 @@ commands = {
 }
 
 def console():
-    print("""
+    print(r"""
  ______   __  __     ______     ______    
 /\  == \ /\ \_\ \   /\  __ \   /\  ___\   
 \ \  _-/ \ \____ \  \ \ \/\ \  \ \___  \  
@@ -27,7 +27,7 @@ def console():
   \/_/     \/_____/   \/_____/   \/_____/ 
                                           
 """)
-    with open('conf/terminal/hashlogin.conf', 'r') as f:
+    with open('conf/terminal/hashlogin.conf', 'r', encoding='utf-8') as f:
         logininfo = f.readline()
         if logininfo == "true":
             print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
