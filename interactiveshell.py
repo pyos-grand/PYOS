@@ -7,7 +7,7 @@ import time
 import fmtest
 
 commands = {
-    "ls":ishlib.listdir,
+    "ls":ishtools.ls,
     "cf":ishtools.cf,
     "m":ishtools.loadmod,
     "fm":fmtest.function_select,
