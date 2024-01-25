@@ -6,7 +6,9 @@ from lib import faststream
 
 def ls():
     path = input("Path: ")
-    ishlib.listdir(path)
+    listdir = os.listdir(path)
+    for i in listdir:
+        print(i)
 
 def cf():
     pathff = input("Path: ")
