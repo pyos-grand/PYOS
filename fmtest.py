@@ -1,6 +1,7 @@
 import os
 import sys
 import shutil
+import lib.filestream as fs
 
 def function_select():
     print("Humanity FileManagerIMROVED 0.0.1")
@@ -57,32 +58,21 @@ def function_select():
     else:
         print("Invalid choice!")
 def show_dircontains():
-    direname = input("Enter dirname: ")
-    try:
-        print(os.listdir(direname))
-    except FileNotFoundError:
-        print("Directory not found!")
+    dirname = input("Enter dirname: ")
+    print(fs.show_dircontains(dirname))
 
 def create_file():
     filename = input("Enter filename: ")
-    try:
-        with open(filename, "w") as file:
-            print("File created!")
-    except IOError:
-        print("Error creating file!")
+    print(fs.create_file(filename))
 
 def edit_file():
     filename = input("Enter filename: ")
-    try:
-        with open(filename, "w") as file:
-            file.write(input("Enter text: "))
-            print("File edited!")
-    except IOError:
-        print("Error editing file!")
+    edit = input("Enter text: ")
+    print(fs.edit_file(filename,edit))
 
 def delete_file():
   filename = input("Enter filename: ")
-  os.remove(filename)
+  print(fs.delete_file(filename))
   print("File deleted!")
 
 def create_dir():
