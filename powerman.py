@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import lib.filestream as fs
 
 def powerstart():
     ascii = """
@@ -14,7 +15,9 @@ def powerstart():
                                                     
 """
     print(ascii)
-    print("Welcome to powerman- a powerfull universal utility for managing files and directories")
-    print("powerman v. 0.1.0")
+    print("POWERMAN v. 0.0.1")
+    print("(c) 2024 PyOS developers")
+
+
 
     
