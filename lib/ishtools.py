@@ -1,4 +1,3 @@
-import filestream
 import ishlib
 import os
 import sys
