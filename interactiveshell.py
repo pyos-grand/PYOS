@@ -27,6 +27,15 @@ def console():
   \/_/     \/_____/   \/_____/   \/_____/ 
                                           
 """)
+    with open('conf/terminal/hashlogin.conf', 'r') as f:
+        logininfo = f.readline()
+        if logininfo == "true":
+            print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
+        elif logininfo == "false":
+            pass
+        else:
+            print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
+        
     while True:
         command = input("PyOS: ")
         if command in commands:

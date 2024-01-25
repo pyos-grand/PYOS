@@ -149,7 +149,7 @@ def run():
   print(" / ___/ \  // /_/ /_\ \  ")
   print("/_/     /_/ \____//___/  ")
   oth.pu.updpack(commands)
-  print("PYOS PC Olivia 0.1 - PYOS BUILD 23092023, GRAND 0.0.5")
+  print("PYOS PC Oxygen Alpha - PYOS BUILD 250124, GRAND 0.0.5")
   print("[SYSTEM] Loading console configuration")
   with open('conf/terminal/termtype.conf', 'r') as f:
     termtype = f.readline()
