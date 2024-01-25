@@ -5,8 +5,7 @@ import time
 from lib import faststream
 
 def ls():
-    path = input("Path: ")
-    listdir = os.listdir(path)
+    listdir = os.listdir(input("Path: "))
     for i in listdir:
         print(i)
 
