@@ -19,7 +19,7 @@ def cd():
     pathdir = input("Path: ")
     fullpath = working_directory + "/" + pathdir
     isdir = os.path.isdir(fullpath)
-    if (isdir == true):
+    if (isdir == True):
         working_directory = fullpath
     else:
         print("Directory not found.")
