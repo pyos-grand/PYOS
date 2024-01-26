@@ -8,12 +8,14 @@ import fmtest
 
 working_directory = os.getcwd()
 def ls():
+    global working_directory
     listdir = os.listdir(working_directory)
     for i in listdir:
         print(i)
 
 
 def cd():
+    global working_directory
     pathdir = input("Path: ")
     fullpath = working_directory + "/" + pathdir
     isdir = os.path.isdir(fullpath)
@@ -38,7 +40,7 @@ commands = {
 }
 
 def console():
-    working_directory = os.getcwd()
+    global working_directory
     print(r"""
  ______   __  __     ______     ______    
 /\  == \ /\ \_\ \   /\  __ \   /\  ___\   
