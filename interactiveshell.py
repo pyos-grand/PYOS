@@ -6,8 +6,32 @@ import sys
 import time
 import fmtest
 
+working_directory = os.getcwd()
+def ls():
+    global working_directory
+    listdir = os.listdir(working_directory)
+    for i in listdir:
+        print(i)
+
+
+def cd():
+    global working_directory
+    pathdir = input("Path: ")
+    fullpath = working_directory + "/" + pathdir
+    isdir = os.path.isdir(fullpath)
+    if (isdir == True):
+        working_directory = fullpath
+    else:
+        print("Directory not found.")
+
+def cddotdot():
+    global working_directory
+    working_directory = os.path.abspath(os.path.join(working_directory, os.pardir))
+
 commands = {
-    "ls":ishtools.ls,
+    "ls":ls,
+    "cd":cd,
+    "cd ..":cddotdot,
     "apparto":ishtools.ls_legacy,
     "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
