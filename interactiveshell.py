@@ -24,7 +24,7 @@ def cd():
 
 commands = {
     "ls":ls,
-    "cd":cd
+    "cd":cd,
     "apparto":ishtools.ls_legacy,
     "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
