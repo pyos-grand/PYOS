@@ -6,7 +6,7 @@ import sys
 import time
 import fmtest
 
-working_directory = ""
+working_directory = os.getcwd()
 def ls():
     listdir = os.listdir(working_directory)
     for i in listdir:
