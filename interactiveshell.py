@@ -24,9 +24,14 @@ def cd():
     else:
         print("Directory not found.")
 
+def cddotdot():
+    global working_directory
+    working_directory = os.path.abspath(os.path.join(working_directory, os.pardir))
+
 commands = {
     "ls":ls,
     "cd":cd,
+    "cd ..":cddotdot,
     "apparto":ishtools.ls_legacy,
     "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
