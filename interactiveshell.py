@@ -38,6 +38,7 @@ commands = {
 }
 
 def console():
+    working_directory = os.getcwd()
     print(r"""
  ______   __  __     ______     ______    
 /\  == \ /\ \_\ \   /\  __ \   /\  ___\   
