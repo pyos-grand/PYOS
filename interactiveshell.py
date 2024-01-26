@@ -21,7 +21,13 @@ commands = {
 }
 
 def console():
-    print(r"""
+    
+    global working_directory
+    
+    with open('conf/terminal/hashlogin.conf', 'r', encoding='utf-8') as f:
+        logininfo = f.readline()
+        if logininfo == "true":
+            print(r"""
  ______   __  __     ______     ______    
 /\  == \ /\ \_\ \   /\  __ \   /\  ___\   
 \ \  _-/ \ \____ \  \ \ \/\ \  \ \___  \  
