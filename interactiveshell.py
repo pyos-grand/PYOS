@@ -28,10 +28,15 @@ def cddotdot():
     global working_directory
     working_directory = os.path.abspath(os.path.join(working_directory, os.pardir))
 
+def pwd():
+    global working_directory
+    print(working_directory)
+
 commands = {
     "ls":ls,
     "cd":cd,
     "cd ..":cddotdot,
+    "pwd":pwd,
     "apparto":ishtools.ls_legacy,
     "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
