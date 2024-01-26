@@ -7,23 +7,21 @@ import time
 import fmtest
 
 working_directory = ""
-def ls(){
+def ls():
     listdir = os.listdir(working_directory)
     for i in listdir:
         print(i)
-}
 
-def cd(){
+
+def cd():
     pathdir = input("Path: ")
     fullpath = working_directory + "/" + pathdir
     isdir = os.path.isdir(fullpath)
-    if (isdir == true){
+    if (isdir == true):
         working_directory = fullpath
-    }
-    else{
+    else:
         print("Directory not found.")
-    }
-}
+
 commands = {
     "ls":ls,
     "cd":cd
