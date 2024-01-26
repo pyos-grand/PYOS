@@ -6,8 +6,29 @@ import sys
 import time
 import fmtest
 
+working_directory = ""
+
+def ls():
+    global working_directory
+    listdir = os.listdir(working_directory)
+    for i in listdir:
+        print(i)
+
+def cd():
+    global working_directory
+    pathdir = input("Path: ")
+    fullpath = working_directory + "/" + pathdir
+    isdir = os.path.isdir(fullpath)
+    if (isdir == True):
+        working_directory = fullpath
+    
+    else:
+        print("Directory not found.")
+    
+
 commands = {
-    "ls":ishtools.ls,
+    "ls":ls,
+    "cd":cd,
     "apparto":ishtools.ls_legacy,
     "mkdir":ishtools.mkdir,
     "cf":ishtools.cf,
@@ -21,7 +42,11 @@ commands = {
 }
 
 def console():
-    print(r"""
+    global working_directory
+    with open('conf/terminal/hashlogin.conf', 'r', encoding='utf-8') as f:
+        logininfo = f.readline()
+        if logininfo == "true":
+            print(r"""
  ______   __  __     ______     ______    
 /\  == \ /\ \_\ \   /\  __ \   /\  ___\   
 \ \  _-/ \ \____ \  \ \ \/\ \  \ \___  \  
@@ -29,9 +54,6 @@ def console():
   \/_/     \/_____/   \/_____/   \/_____/ 
                                           
 """)
-    with open('conf/terminal/hashlogin.conf', 'r', encoding='utf-8') as f:
-        logininfo = f.readline()
-        if logininfo == "true":
             print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
         elif logininfo == "false":
             pass
