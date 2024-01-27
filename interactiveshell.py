@@ -43,6 +43,7 @@ commands = {
     "vf":ishtools.vf,
     "wf":ishtools.wf,
     "m":ishtools.loadmod,
+    "loadmod":ishtools.loadmod,
     "fm":fmtest.function_select,
     "hfmi":fmtest.function_select,
     "help":ishtools.help,
