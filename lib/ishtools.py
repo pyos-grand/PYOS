@@ -34,9 +34,12 @@ def wf():
     faststream.wf(pathff,datac)
 
 def loadmod():
-    modpath = input("Please, enter mod path.")
-    with open(modpath) as f2:
-        exec(f2.read())
+    modpath = input("Path: ")
+    try:
+        with open(modpath) as f2:
+            exec(f2.read())
+    except IOError:
+        print("Error while reading file.")
 
 def mkdir():
     path = input("Path: ")
@@ -45,6 +48,8 @@ def mkdir():
 
 def help():
     print("ls - Show directory entries")
+    print("cd - Open Directory")
+    print("mkdir - Make Directory")
     print("hfmi - Humanity FileManager Improved")
     print("cf - Create file")
     print("vf - View file")
