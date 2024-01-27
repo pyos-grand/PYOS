@@ -16,12 +16,13 @@ def maintools():
     3. Other tools
     4. Exit powerman
     """
+    print(modes)
     while (True):
         modechoose = input("Tool: ")
         if (modechoose == "1"):
             text_editor()
         elif (modechoose == "2"):
-            interactiveshell.console()
+            shell.console()
         elif (modechoose == "3"):
             pass
         elif (modechoose == "4"):
@@ -36,6 +37,7 @@ def powerselect():
     1. Text editor, shell and tools
     2. Text editor
     """
+    print(modes)
     modechoose = input("Mode: ")
     if (modechoose == "1"):
         maintools()
