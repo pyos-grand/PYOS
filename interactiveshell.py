@@ -5,6 +5,7 @@ import os
 import sys
 import time
 import fmtest
+import powerman
 
 working_directory = os.getcwd()
 def ls():
@@ -46,6 +47,7 @@ commands = {
     "loadmod":ishtools.loadmod,
     "fm":fmtest.function_select,
     "hfmi":fmtest.function_select,
+    "powerman":powerman.powerstart,
     "help":ishtools.help,
     "exit":ishtools.exit
 }
