@@ -61,6 +61,6 @@ def powerstart():
     print("POWERMAN v. 0.0.1")
     print("(c) 2024 PyOS developers")
     
-
+    powerselect()
 
     
