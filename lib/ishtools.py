@@ -16,9 +16,9 @@ def ls_legacy():
                 print("This command is deprecated. Please use 'ls' instead.")
                 print(os.listdir(input("Path: ")))
         elif apparto == "false":
-            print("Apparto is disabled. Please enable it in conf/terminal/apparto.conf.")
+            print("Apparto is disabled.")
         else:
-            print("Apparto is disabled. Please enable it in conf/terminal/apparto.conf.")
+            print("Apparto is disabled..")
 
 def cf():
     pathff = input("Path: ")
