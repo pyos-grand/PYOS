@@ -1,5 +1,7 @@
 import os
 import sys
+import shutil
+import lib.filestream as fs
 
 def function_select():
     print("Humanity FileManagerIMROVED 0.0.1")
@@ -56,25 +58,21 @@ def function_select():
     else:
         print("Invalid choice!")
 def show_dircontains():
-  direname = input("Enter dirname: ")
-  print(os.listdir(direname))
+    dirname = input("Enter dirname: ")
+    print(fs.show_dircontains(dirname))
 
 def create_file():
-  filename = input("Enter filename: ")
-  file = open(filename,"w")
-  file.close()
-  print("File created!")
+    filename = input("Enter filename: ")
+    print(fs.create_file(filename))
 
 def edit_file():
-  filename = input("Enter filename: ")
-  file = open(filename,"w")
-  file.write(input("Enter text: "))
-  file.close()
-  print("File edited!")
+    filename = input("Enter filename: ")
+    edit = input("Enter text: ")
+    print(fs.edit_file(filename,edit))
 
 def delete_file():
   filename = input("Enter filename: ")
-  os.remove(filename)
+  print(fs.delete_file(filename))
   print("File deleted!")
 
 def create_dir():
@@ -100,16 +98,22 @@ def rename_dir():
   print("Directory renamed!")
 
 def copy_file():
-  filename = input("Enter filename: ")
-  newname = input("Enter new filename: ")
-  os.system("cp "+filename+" "+newname)
-  print("File copied!")
+    filename = input("Enter filename: ")
+    newname = input("Enter new filename: ")
+    try:
+        shutil.copy(filename, newname)
+        print("File copied!")
+    except IOError:
+        print("Error copying file!")
 
 def copy_dir():
-  dirname = input("Enter dirname: ")
-  newname = input("Enter new dirname: ")
-  os.system("cp -r "+dirname+" "+newname)
-  print("Directory copied!")    
+    dirname = input("Enter dirname: ")
+    newname = input("Enter new dirname: ")
+    try:
+        shutil.copytree(dirname, newname)
+        print("Directory copied!")
+    except IOError:
+        print("Error copying directory!")
 
 def move_file():
   filename = input("Enter filename: ")

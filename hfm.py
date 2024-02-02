@@ -2,7 +2,6 @@ import os
 
 
 def hfmstart():
-  print("Please, use hfmi instead of hfm. 'hfm' support will end in 2024.")
   print("Humanity FileManager 0.0.4")
   print("1. Create file")
   print("2. Open file and write")

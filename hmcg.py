@@ -6,6 +6,8 @@ import pysys
 import hetools
 import oth.pu
 import fmtest
+import servman
+import os
 
 def apparto():
   appartoz()
@@ -78,6 +80,7 @@ def help():
   print("listdir - Show directory entries")
   print("husr - Humanity UserManager")
   print("hfm - Humanity FileManager")
+  print("hfmi - Humanity FileManager Improved")
   print("htxe - Humanity TextEditor")
   print("info - Information Programm")
   print("m - Load modification")
@@ -146,7 +149,22 @@ def run():
   print(" / ___/ \  // /_/ /_\ \  ")
   print("/_/     /_/ \____//___/  ")
   oth.pu.updpack(commands)
-  print("PYOS PC Olivia 0.1 - PYOS BUILD 19042023, GRAND 0.0.5")
+  print("PYOS PC Oxygen Alpha - PYOS BUILD 250124, GRAND 0.0.5")
+  print("[SYSTEM] Loading console configuration")
+  with open('conf/terminal/termtype.conf', 'r') as f:
+    termtype = f.readline()
+    if(termtype == "STD"):
+      print("[INFO] Terminal type: STD")
+    if (termtype == "COLOR"):
+      print("[INFO] Terminal type: COLOR")
+      if(os.path.isfile("oth/ctrmlib.py")):
+        print("[INFO] Loading color terminal")
+        with open('oth/ctrmlib-term.py') as f:
+          exec(f.read())
+      else:
+        print("[ERROR] Color terminal lib not found")
+        print("[INFO] Loading STD terminal")
+  print("[SYSTEM] Loading complete")
   print("User Creation System: Create user")
   logginguser = input("USERNAME : ")
   isUserLoggedOn = False
