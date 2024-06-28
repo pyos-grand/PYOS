@@ -67,12 +67,11 @@ def console():
   \/_/     \/_____/   \/_____/   \/_____/ 
                                           
 """)
-            print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
+            print("Welcome to PyOS Helium (BUILD 280624)")
         elif logininfo == "false":
             pass
         else:
-            print("Welcome to PyOS Oxygen Alpha (BUILD 250124)")
-        
+            print("Welcome to PyOS Helium (BUILD 280624)")  
     while True:
         command = input("PyOS: ")
         if command in commands:

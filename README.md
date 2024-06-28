@@ -5,12 +5,15 @@ PyOS - python code to create real OS.
 
 ## Installation
 
-This version (Olivia) does not require installing other libraries. Just run the python compiler on the main.py file
+This version (Helium) does not require installing other libraries. Just run the python compiler on the main.py file
 
 ## Features
 
-### New features in PyOS Olivia
+### New features in PyOS Helium
 
-* Imporved File Manager
-* Added support of running other python files, without modifying hmcg.py/main.py
+
+### New features in PyOS Helium
+
+* Improved Interactive Shell
+* Powerman (in development)
 
